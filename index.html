@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS vježba 34</title>
+    </head>
+    <style>
+        *, *::before, *::after{
+        box-sizing: border-box;
+        margin: 0;
+        padding:0;
+        }
+
+        @keyframes fade-in {
+            from {opacity: 0; }
+            to {opacity: 100%;}
+        }
+
+        @keyframes fade-out{
+            from {opacity: 100%}
+            to {opacity: 0;}
+        }
+
+        @keyframes float-in {
+            from {opacity: 0; transform: translateX(500px);}
+            to {opacity: 100%; transform: translateX(0);}
+        }
+
+        @keyframes float-out{
+            from {opacity: 100%; transform: translateY(0);}
+            to {opacity: 0; transform: translateY(500px);}
+        }
+
+        @keyframes shake{
+            from {transform: rotate(10deg);}
+            50% {transform: rotate(0);}
+            to {transform: rotate(-10deg);}
+        }
+
+        body{
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        .box1{
+            width: 100px;
+            height: 100px;
+            margin:20px;
+            background-color: aquamarine;
+            animation: fade-in 2s ease-in;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            margin:20px;
+            background-color: aquamarine;
+            animation: fade-out 2s ease-in;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            margin:20px;
+            background-color: aquamarine;
+            animation: float-in 2s ease-in;
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            margin:20px;
+            background-color: aquamarine;
+            animation: float-out 2s ease-in;
+        }
+        .box5{
+            width: 100px;
+            height: 100px;
+            margin:20px;
+            background-color: aquamarine;
+            animation: shake 0.2s ease-in;
+            animation-iteration-count: infinite;
+        }
+
+
+    </style>
+
+    <body>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+    </body>
+</html>
